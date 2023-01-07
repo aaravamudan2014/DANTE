@@ -1,0 +1,16 @@
+pandas
+numpy
+datetime
+autopep8
+matplotlib
+scipy
+tables
+h5py
+hickle
+dask
+distributed
+# imports for the deep learning architecture to predict exploits based on mitre description
+#sklearn
+#tensorflow
+#gensim
+#keras

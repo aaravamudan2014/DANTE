@@ -1,0 +1,38 @@
+====================
+Package installation
+====================
+
+The ability to use this package anywhere as an import is quite useful since users aren't exposed to the relative file organization within the repository.
+
+This tutorial goes over how get a running example using imports from this library.
+
+Firstly, if you prefer working in a virtual environemnt, 
+make sure that you are in your environment. 
+If you are working with conda environment, 
+make sure it is activated and if you working with a pip env, make sure that the virtual env folder is either outside the repository or if it inside the repository, include it in the `.gitignore` file.
+
+
+Change directory to the base directory (directory containing the README.md) 
+and install all the packages from the
+requirements.txt file. Then, install the existing library using `pip install` as follows.
+
+.. code-block:: console
+
+   pip install -r requirements.txt
+   pip install -e .
+   
+The second `pip install` command will download the current project as its own package. This can be verified using the following commnad. 
+
+.. code-block:: console
+
+   pip list
+
+
+.. image:: _static/pip_list_packages.gif
+   :height: 200
+   :scale: 100
+   :alt: branch created on github
+   :align: center
+
+
+   

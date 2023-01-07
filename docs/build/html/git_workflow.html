@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html lang="Python">
+  <head>
+    <meta charset="utf-8" />
+    <title>Git Workflows &#8212; SPIE 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Package installation" href="install_repo.html" />
+    <link rel="prev" title="Welcome to SPIE&#39;s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="git-workflows">
+<h1>Git Workflows<a class="headerlink" href="#git-workflows" title="Permalink to this headline">¶</a></h1>
+<p>If <span class="math notranslate nohighlight">\(\sigma_{1}\)</span> equals <span class="math notranslate nohighlight">\(\sigma_{2}\)</span> then etc, etc.</p>
+<ul class="simple">
+<li><p>This tutorial covers how to keep up with the workflow when working with SPIE.</p></li>
+<li><p>As of yet, this library exists solely in the github.fit.edu domain. And as such, you will need to add you credentials in order to get access to this library.</p></li>
+<li><p>If you are a new user, first contact the project admin: Akshay Aravamudan at <a class="reference external" href="mailto:aaravamudan2014&#37;&#52;&#48;my&#46;fit&#46;edu">aaravamudan2014<span>&#64;</span>my<span>&#46;</span>fit<span>&#46;</span>edu</a> to get access.</p></li>
+</ul>
+<p>This tutorial is divided into two sections:</p>
+<ol class="arabic simple">
+<li><p>Starting from scratch.</p></li>
+<li><p>Pushing code after project setup.</p></li>
+</ol>
+<div class="section" id="starting-from-scratch">
+<h2>1. Starting from scratch<a class="headerlink" href="#starting-from-scratch" title="Permalink to this headline">¶</a></h2>
+<p>This part of the tutorial ensures that new users will be able to clone and develop on the repository with ease.</p>
+<p>If you are creating a new directory to contain the repository, change directory (cd) into the directory, and enter the following command to intialize the git repository.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git init</span>
+</pre></div>
+</div>
+<p>Once git has been initialized in the directory, since we are working with the github.fit.edu domain, you will have to enter your TRACKS credentials.</p>
+<p>Note: for windows users, you can add github.fit.edu credentials by simply adding it in the windows credential manager. If there is already a credential for github.fit.edu, ensure that the username and password is up to date.</p>
+<a class="reference internal image-reference" href="_images/credential_manager_1.png"><img alt="credential manager" class="align-center" src="_images/credential_manager_1.png" style="width: 250.0px; height: 200.0px;" /></a>
+<p>If you have never entered credentials for github.fit.edu, the following command will ensure that you dont have to re-enter the username/password.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git config --global credential.helper store</span>
+</pre></div>
+</div>
+<p>Now, you can clone the project from <a class="reference external" href="https://github.fit.edu/aaravamudan2014/split-population-survival-exploits.git">https://github.fit.edu/aaravamudan2014/split-population-survival-exploits.git</a> as follows</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.fit.edu/aaravamudan2014/split-population-survival-exploits.git</span>
+</pre></div>
+</div>
+<p>If you do not have saved credentials, you will be prompted to enter you TRACKS username and password.</p>
+</div>
+<div class="section" id="adding-project-to-package-list-in-an-environment">
+<h2>2.5 Adding project to package list in an environment<a class="headerlink" href="#adding-project-to-package-list-in-an-environment" title="Permalink to this headline">¶</a></h2>
+<p>Once the SPIE repository has been downloaded to the local system,
+one still has to download it as a package to enable using it as a library.
+This should preferrably done in a virtual enviroment (pip or conda).
+More details on how to do this can be found :ref: <cite>_install_repo_ref</cite>.</p>
+<p><strong>The following steps assume that you have downloaded all the requisite packages in your local system and can run the test file</strong></p>
+</div>
+<div class="section" id="working-on-a-branch">
+<h2>2. Working on a branch<a class="headerlink" href="#working-on-a-branch" title="Permalink to this headline">¶</a></h2>
+<p>The current workflow for this project, given that there are few developers, involves creating your own branch and pushing all changes to this branch.</p>
+<p><strong>Branch naming convention</strong></p>
+<p><strong>1. Words are separated by camel case.</strong></p>
+<p><strong>2. First word is the developer name.</strong></p>
+<p><strong>3. Second word is the task that is being accomplished by the branch.</strong></p>
+<p>For instance, if I wanted to work on documentation, I would name the branch <cite>AkshayDocumentation</cite></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout -b *branch-name*</span>
+</pre></div>
+</div>
+<p>This command will create a branch if it does not already exist. It also checks out the branch that you have selected.
+This means that you can start working on your task. For confirmation you can enter the following command to check which branch you are at.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git status</span>
+</pre></div>
+</div>
+<p>This shows that I am currently working on the <cite>AkshayOrganizing</cite> branch, branched out from <cite>origin</cite> when it was created.</p>
+<a class="reference internal image-reference" href="_images/git_status.jpeg"><img alt="git status output" class="align-center" src="_images/git_status.jpeg" style="width: 500.0px; height: 100.0px;" /></a>
+<p>So at this point you have created a local branch. The upstream repository (hosted by github.fit.edu)
+still is not aware of your newly created branch.
+To do this, we set the upstream using the following command which does a trivial push upstream.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push -set-upstream origin/*branch-name*</span>
+</pre></div>
+</div>
+<p>Once you have created a remote branch, you can visit the associated github page: <a class="reference external" href="https://github.fit.edu/aaravamudan2014/split-population-survival-exploits.git">https://github.fit.edu/aaravamudan2014/split-population-survival-exploits.git</a> and find the branch you have created.</p>
+<a class="reference internal image-reference" href="_images/branch_created.jpeg"><img alt="branch created on github" class="align-center" src="_images/branch_created.jpeg" style="width: 200.0px; height: 200.0px;" /></a>
+</div>
+<div class="section" id="pushing-code-after-project-setup">
+<h2>3. Pushing code after project setup<a class="headerlink" href="#pushing-code-after-project-setup" title="Permalink to this headline">¶</a></h2>
+<p>After having setup the branch and worked on your code changes, you have to push the code to the branch upstream.</p>
+<p>First add all files to be staged for commit. Change directory to the base directory (directory containing READE.md) in the repository. This ensures that all relevant files are added.
+Note that files with extensions contained in the <em>.gitignore</em> file will be ignored.</p>
+<p>** Note: If there is any file with size above 100mb, include it in the .gitignore file. Pushing it upstream may cause some issues that are difficult to reverse.**</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add *</span>
+<span class="go">git commit -m &quot;Enter your commit message here&quot;</span>
+<span class="go">git push</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_static/pushing_code.gif"><img alt="branch created on github" class="align-center" src="_static/pushing_code.gif" style="height: 200.0px;" /></a>
+</div>
+<div class="section" id="the-gitignore-file">
+<h2>4. The .gitignore file<a class="headerlink" href="#the-gitignore-file" title="Permalink to this headline">¶</a></h2>
+<p>Since the gitigore file is local to your branch, make sure the following is contained in the .gitignore file</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">splitPopulationSurvivalExploits/src/data</span>
+<span class="go">venv</span>
+<span class="go">*.pem</span>
+<span class="go">docs/source</span>
+<span class="go">docs/Makefile</span>
+<span class="go">docs/make.bat</span>
+
+<span class="go">*.h5</span>
+<span class="go">splitPopulationSurvivalExploits/src/temp_storage</span>
+<span class="go">splitPopulationSurvivalExploits/src/splitPopulationSurvivalExploits.egg-info</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-daily-updates">
+<h2>5. The daily updates<a class="headerlink" href="#the-daily-updates" title="Permalink to this headline">¶</a></h2>
+<p>Since we have multiple developers working on the repository through multiple branches.
+Once in a while the master branch will be updated. To make sure that your branch is up to date, enter the following git commands.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout master</span>
+<span class="go">git pull</span>
+<span class="go">git checkout *your branch name*</span>
+<span class="go">git merge master</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/SPIELogo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-from-scratch">1. Starting from scratch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-project-to-package-list-in-an-environment">2.5 Adding project to package list in an environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-on-a-branch">2. Working on a branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-code-after-project-setup">3. Pushing code after project setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-gitignore-file">4. The .gitignore file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-daily-updates">5. The daily updates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install_repo.html">Package installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_examples.html">Why use SPIE ?</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to SPIE's documentation!</a></li>
+      <li>Next: <a href="install_repo.html" title="next chapter">Package installation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Akshay Aravamudan, Georgios Anagnostopoulos, Xi Zhang.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/git_workflow.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

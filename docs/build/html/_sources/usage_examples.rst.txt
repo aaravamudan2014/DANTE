@@ -1,0 +1,5 @@
+==================
+Why use SPIE ?
+==================
+
+The SPIE (Stochastic Process Information Extraction) package is designed to provide user
