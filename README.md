@@ -18,6 +18,19 @@ In order to run the code using newer datasets, please follow the following steps
 1. The data should be an `npy` file which contains a dictionary of the following format
 
 ```
-
-
+{'Cascade ID #1': {'timestamps':[0.0,..., *right censoring time*], 'timestamp_ids':[1,5,3,6,7]},
+ 'Cascade ID #2': ...
+ .
+ .
+ .
+ }
 ```
+
+It is much more preferrable to have the relative right cnoesring time as opposed to an absolute time. It is also suggested that the first item in the timestamps list be a zero to indicate the kickoff event. Finally, the user ids in the `timestamp_ids` list must start from zero. This is to ensure connections the to the feature vectors. 
+
+
+To construct the feature vectors, you can either leave them to be zero or instead if there is an adjacency graph representation of the relationships, you can use that to extract features.
+
+File naming conventions:
+- for realizations, '*dataset_name*_realizations.npy'
+- for features, '*dataset_name*_user_features.npy'
