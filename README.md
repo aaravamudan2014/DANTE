@@ -1,10 +1,8 @@
 # split-population-survival-exploits
 
-This repository holds the code for the AAAI paper ""
+This repository holds the code for the AAAI 2023 paper "ANytime USer Engagement Prediction in Information Cascades for Arbitrary Observation Periods". All documentation and infromation regarding posting things will be available on docs/build/html . The docs were created by sphinx and alabaster. Finally this repository is still in the final stages of editing, so there might be certain aspects that may not coopperate. We appreciate yor patience. This README will be updated when the code has been rigourously tested. 
 
-All documentation and infromation regarding posting things will be available on docs/build/html . The docs were created by sphinx and alabaster. 
-
-For any question and/or concerns, contact Akshay Aravamudan (aaravamudan2014@my.fit.edu)
+For any question and/or concerns, contact [https://aaravamudan2014.github.io/Akshay-Aravamudan/](Akshay Aravamudan) (aaravamudan2014@my.fit.edu
 
 In order to run the code using existing datasets, please follow the following steps
 
