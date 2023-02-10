@@ -1,4 +1,4 @@
-# split-population-survival-exploits
+# Discriminative AnyTime user Engagement prediction (DANTE)
 
 This repository holds the code for the AAAI 2023 paper "ANytime USer Engagement Prediction in Information Cascades for Arbitrary Observation Periods". All documentation and infromation regarding posting things will be available on docs/build/html . The docs were created by sphinx and alabaster. Finally this repository is still in the final stages of editing, so there might be certain aspects that may not coopperate. We appreciate yor patience. This README will be updated when the code has been rigourously tested. 
 
